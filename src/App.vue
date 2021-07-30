@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="app">
+    <GamesList :games="games"/>
+  </div>
 </template>
 
-<script>
-import HelloWorld from "./components/HelloWorld.vue";
+<script lang="ts">
+import { defineComponent, reactive, ref, toRefs } from "vue";
+import { Vue } from "vue-class-component";
+import GamesList from './components/GamesList.vue'
+import Game from './types/game'
 
-export default {
+export default defineComponent({
   name: "App",
-  components: {
-    HelloWorld,
+  components: { GamesList },
+  data() {
+    return {
+      great: "Hellow",
+      name: "Deiver",
+    };
   },
-};
+  methods: {
+    changeName(name: string) {
+      this.name = name;
+    },
+  },
+  setup(){
+    const games = ref<Game[]>([
+      {id: 1, title:'loco', description:'Los locos', rate:7, link:'https://picsum.photos/id/1005/600/200'}
+    ])
+
+    return { games }
+  }
+});
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

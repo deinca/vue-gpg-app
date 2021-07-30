@@ -1,0 +1,30 @@
+<template>
+  <div class="games">
+    <ul>
+      <li v-for="game in games" :key="game.id">
+        <h2>{{ game.title }}</h2>
+        <img :scr="game.link" alt="asdasdasd">
+        
+        <p>{{ game.description }}</p>
+      </li>
+    </ul>
+  </div>
+</template>
+
+
+<script lang="ts">
+import { defineComponent, PropType } from 'vue'
+import Game from '@/types/game'
+export default defineComponent({
+  props: {
+    games:{
+      required: true,
+      type: Array as PropType<Game[]>
+    }
+  }
+})
+</script>
+
+<style scoped>
+
+</style>

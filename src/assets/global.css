@@ -1,0 +1,245 @@
+/*  ==========================================================================
+    CSS STYLE MADE BY DEIVER 2021
+    This template is made with only variables. This variables can you find here bellow.
+    This template is only for educational purpose and not for selling or to use in
+    projects companies.
+    If you use my codes I am not responsible for the damage on your web app or site.
+    If there is a problem make an issue or text me via github.
+    Thank you for reading!
+    ==========================================================================  */
+
+    @import url("https://fonts.googleapis.com/css?family=Rubik:400");
+
+    /* Css variables and color pallet from dark to light  */
+    :root {
+      --black-color: #0a0a0a;
+      --dark-blue: #14213d;
+      --soft-yellow: #fca311;
+      --soft-grey: #e5e5e5;
+      --white: #fff;
+      /* --border-grid: solid 1px red; */
+    }
+    
+    /*  Standaards
+        ==========================================================================  */
+    
+    html {
+      font-size: 100%;
+    } /*16px | 1em*/
+    body {
+      width: 100%;
+      position: relative;
+      font-family: "Rubik", Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      background: var(--black-color);
+      color: var(--white);
+      margin: 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 1rem 0 1rem;
+      font-family: "Rubik", sans-serif;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--white);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.7rem;
+    }
+    h2 {
+      font-size: 2.4rem;
+    }
+    h3 {
+      font-size: 2.1rem;
+    }
+    h4 {
+      font-size: 1.7rem;
+    }
+    h5 {
+      font-size: 1.2rem;
+    }
+    small,
+    .text_small {
+      font-size: 0.8rem;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+    
+    img {
+      width: inherit;
+    }
+    
+    /*  Section header
+        ==========================================================================  */
+    
+    header {
+      width: 94.5%;
+      border: var(--border-grid);
+      background-color: var(--dark-blue);
+      padding: 1rem 3%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+    }
+    
+    nav {
+      border: var(--border-grid);
+      width: 30%;
+    }
+    
+    nav h2 {
+      display: none;
+    }
+    
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    a {
+      text-decoration: none;
+      color: var(--white);
+    }
+    a:hover {
+      color: var(--soft-yellow);
+    }
+    
+    /*  Section Aside
+        ==========================================================================  */
+    
+    aside {
+      border: var(--border-grid);
+      margin: 0 3%;
+      padding: 7rem 0 1.5% 0;
+    }
+    
+    aside form {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    aside form label {
+      margin-right: 0.5rem;
+    }
+    
+    aside form select {
+      height: 2rem;
+      border: none;
+      border-radius: 3px;
+      background: var(--soft-yellow);
+      padding: 0.5rem;
+    }
+    
+    /*  Section Main
+        ==========================================================================  */
+    
+    main {
+      border: var(--border-grid);
+      margin: 0 3%;
+    }
+    
+    main section ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+    main section li {
+      width: 49%;
+      border: var(--border-grid);
+      margin-bottom: 1rem;
+    }
+    
+    /*  Section Article
+        ==========================================================================  */
+    
+    article {
+      border: var(--border-grid);
+    }
+    
+    article img {
+      width: 100%;
+    }
+    
+    article footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+    }
+    
+    article footer p {
+      width: 70%;
+      padding: 1rem;
+      margin: 0;
+    }
+    
+    article footer a {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: var(--soft-yellow);
+    }
+    
+    article footer a:hover {
+      color: var(--dark-blue);
+      border-radius: 0 0 1rem 0;
+    }
+    /*  Section Footer
+        ==========================================================================  */
+    
+    footer {
+      display: flow-root;
+      padding: 0 3%;
+      border: var(--border-grid);
+      background-color: var(--dark-blue);
+    }
+    
+    /*  Section Classes
+        ==========================================================================  */
+    
+        .detail-page main {
+      padding: 7rem 0 1.5% 0;
+    }
+    
+    /*  ==========================================================================
+        Responsive sections
+        ==========================================================================  */
+    @media only screen and (min-width: 15rem) {
+      /* For mobiles 260px: */
+      body {
+        background: darkgreen;
+      }
+    }
+    
+    @media only screen and (min-width: 20rem) {
+      /* For mobiles: */
+      body {
+        background: green;
+      }
+    }
+    
+    @media only screen and (min-width: 35.7rem) {
+      /* For tablets: */
+      body {
+        background: blue;
+      }
+    }
+    
+    @media only screen and (min-width: 65rem) {
+      /* For desktop: */
+      body {
+        background: var(--black-color);
+      }
+    }
+    
