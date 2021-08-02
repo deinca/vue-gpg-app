@@ -6,7 +6,6 @@
 
 <script lang="ts">
 import { defineComponent, reactive, ref, toRefs } from "vue";
-import { Vue } from "vue-class-component";
 import GamesList from './components/GamesList.vue'
 import Game from './types/game'
 

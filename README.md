@@ -1,4 +1,4 @@
-# vue-gpg-app
+# gpg-app
 
 ## Project setup
 ```

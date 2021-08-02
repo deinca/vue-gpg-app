@@ -3,9 +3,9 @@
     <ul>
       <li v-for="game in games" :key="game.id">
         <h2>{{ game.title }}</h2>
-        <img :scr="game.link" alt="asdasdasd">
-        
+        <img :src="game.link"/>
         <p>{{ game.description }}</p>
+
       </li>
     </ul>
   </div>
@@ -13,18 +13,17 @@
 
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
-import Game from '@/types/game'
+import { defineComponent, PropType } from "vue";
+import Game from "@/types/game";
 export default defineComponent({
   props: {
-    games:{
+    games: {
       required: true,
-      type: Array as PropType<Game[]>
-    }
-  }
-})
+      type: Array as PropType<Game[]>,
+    },
+  },
+});
 </script>
 
 <style scoped>
-
 </style>
