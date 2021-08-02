@@ -5,7 +5,6 @@
         <h2>{{ game.title }}</h2>
         <img :src="game.link"/>
         <p>{{ game.description }}</p>
-
       </li>
     </ul>
   </div>
