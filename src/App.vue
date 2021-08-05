@@ -1,7 +1,7 @@
 <template>
-  <div class="app">
-    <GamesList :games="games"/>
-  </div>
+  <main class="app">
+    <GamesList :games="games" />
+  </main>
 </template>
 
 <script lang="ts">
@@ -9,29 +9,28 @@ import { defineComponent, reactive, ref, toRefs } from "vue";
 import GamesList from './components/GamesList.vue'
 // import Game from './types/game'
 
+
 export default defineComponent({
   name: "App",
   components: { GamesList },
   data() {
     return {
-      great: "Hellow",
-      name: "Deiver",
+      games: []
     };
   },
-  methods: {
-    changeName(name: string) {
-      this.name = name;
-    },
-  },
-  setup(){
-    const games = [
-      {id: 1, title:'loco', description:'Los locos', rate:7, link:'https://picsum.photos/id/1005/600/200'}
-    ]
-
-    return { games }
+  mounted() {
+    fetch(
+      "https://api.rawg.io/api/games?key=c73433c137764cfcb5fc789d1d008a79"
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(data => {
+        this.games = data.results
+        console.log(data.results)
+        });
   }
 });
-
 </script>
 
 <style>
