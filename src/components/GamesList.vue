@@ -13,12 +13,12 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import Game from "@/types/game";
+// import Game from "@/types/game";
 export default defineComponent({
   props: {
     games: {
       required: true,
-      type: Array as PropType<Game[]>,
+      type: Array ,
     },
   },
 });
