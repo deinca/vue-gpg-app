@@ -1,4 +1,5 @@
 <template>
+
   <section>
     <h2>Games</h2>
     <p>Choose a game below to see screenshots of the gameplay</p>
@@ -34,12 +35,10 @@ export default defineComponent({
   props: {
     games: {
       required: true,
-      type: Array ,
-
+      type: Array,
     },
   },
 });
-
 </script>
 
 <style scoped>
